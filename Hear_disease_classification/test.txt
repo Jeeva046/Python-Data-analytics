@@ -1,0 +1,45 @@
+---  ------            --------------   -----  
+ 0   HeartDisease      301717 non-null  object 
+ 1   BMI               301717 non-null  float64
+ 2   Smoking           301717 non-null  object 
+ 3   AlcoholDrinking   301717 non-null  object 
+ 4   Stroke            301717 non-null  object 
+ 5   PhysicalHealth    301717 non-null  float64
+ 6   MentalHealth      301717 non-null  float64
+ 7   DiffWalking       301717 non-null  object 
+ 8   Sex               301717 non-null  object 
+ 9   AgeCategory       301717 non-null  object 
+ 10  Race              301717 non-null  object 
+ 11  Diabetic          301717 non-null  object 
+ 12  PhysicalActivity  301717 non-null  object 
+ 13  GenHealth         301717 non-null  object 
+ 14  SleepTime         301717 non-null  float64
+ 15  Asthma            301717 non-null  object 
+ 16  KidneyDisease     301717 non-null  object 
+ 17  SkinCancer        301717 non-null  object 
+dtypes: float64(4), object(14)
+memory usage: 43.7+ MB
+
+for col in df.columns:
+    if df[col].dtype == 'object':
+        sns.countplot(x=df[col], data=df,palette='coolwarm')
+        plt.show()
+
+
+['HeartDisease',
+ 'BMI',
+ 'Smoking',
+ 'AlcoholDrinking',
+ 'Stroke',
+ 'PhysicalHealth',
+ 'MentalHealth',
+ 'DiffWalking',
+ 'Sex',
+ 'AgeCategory',
+ 'Diabetic',
+ 'PhysicalActivity',
+ 'GenHealth',
+ 'SleepTime',
+ 'Asthma',
+ 'KidneyDisease',
+ 'SkinCancer']
